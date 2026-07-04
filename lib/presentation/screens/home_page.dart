@@ -14,11 +14,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [SizedBox(height: 20), Text('Welcome to the Home Page!')],
-        ),
+      body: Column(
+        mainAxisSize: MainAxisSize.min,
+
+        children: [
+          SizedBox(height: 10),
+          //image
+          Align(
+            alignment: Alignment.center,
+            child: Image.asset('assets/images/tanpura.png', height: 250),
+          ),
+        ],
       ),
     );
   }
