@@ -17,7 +17,7 @@ class AppColors {
   // Text
   static const Color primaryText = Color(0xFF3A2A1E);
   static const Color onDarkText = Colors.white;
-  static const Color secondaryText = Color(0xFFC9B18D);
+  static const Color secondaryText = Color(0xFF6E5134);
 
   // Status
   static const Color success = Color(0xFF6AC86C);

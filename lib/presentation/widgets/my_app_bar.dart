@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muscial_instrument/core/theme/app_colors.dart';
+import 'package:muscial_instrument/presentation/widgets/header_title.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({super.key});
@@ -8,16 +9,25 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.scaffoldBackground,
-
-      actions: [
-        IconButton(
-          color: AppColors.primary,
-          icon: Icon(Icons.dark_mode_outlined),
-          onPressed: () {
-            //handle dark mode toggle
-          },
+      flexibleSpace: SafeArea(
+        child: Stack(
+          children: [
+            //header title
+            Center(child: HeaderTitle()),
+            //color mode switch
+            Align(
+              alignment: Alignment.topRight,
+              child: IconButton(
+                color: AppColors.primary,
+                onPressed: () {
+                  {}
+                },
+                icon: Icon(Icons.dark_mode_outlined),
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 

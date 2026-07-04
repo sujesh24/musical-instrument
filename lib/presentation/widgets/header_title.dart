@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:muscial_instrument/core/theme/app_colors.dart';
+import 'package:muscial_instrument/core/theme/app_textstyle.dart';
 
 class HeaderTitle extends StatelessWidget {
   const HeaderTitle({super.key});
@@ -8,9 +10,19 @@ class HeaderTitle extends StatelessWidget {
     return Column(
       children: [
         //main headings
-        Row(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.music_note_rounded, color: AppColors.primary),
+            SizedBox(width: 8),
+            Text('SHRUTHI BOX', style: AppTextstyle.headerTitle),
+            SizedBox(width: 8),
+            Icon(Icons.music_note_rounded, color: AppColors.primary),
+          ],
+        ),
+
         //sub title
-        Text('sub Title'),
+        Text('Tambura Drone', style: AppTextstyle.headerSubtitle),
       ],
     );
   }
