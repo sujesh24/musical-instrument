@@ -21,4 +21,5 @@ class AppColors {
 
   // Status
   static const Color success = Color(0xFF6AC86C);
+  static const Color knob = Color.fromARGB(255, 91, 65, 46);
 }

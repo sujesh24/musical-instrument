@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dial_knob/flutter_dial_knob.dart';
 import 'package:muscial_instrument/core/theme/app_colors.dart';
+import 'package:muscial_instrument/presentation/widgets/dial_knob_control.dart';
 
 class ControlPannel extends StatelessWidget {
   const ControlPannel({super.key});
@@ -23,8 +25,9 @@ class ControlPannel extends StatelessWidget {
       ),
 
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          //power button
+          //*power button
           Row(
             children: [
               Material(
@@ -49,6 +52,77 @@ class ControlPannel extends StatelessWidget {
             color: const Color.fromARGB(131, 158, 158, 158),
             thickness: 1,
             height: 20,
+          ),
+
+          //*control pannel
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              //!knob volume
+              Column(
+                children: [
+                  Text('Volume', style: TextStyle(color: Colors.white)),
+                  SizedBox(height: 25),
+
+                  DialKnobControl(),
+                ],
+              ),
+
+              // SizedBox(width: 20),
+              //!pitch control
+              Expanded(
+                child: Column(
+                  children: [
+                    Text("Pitch", style: TextStyle(color: Colors.white)),
+                    SizedBox(height: 10),
+
+                    //pitch control design
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: AppColors.knob,
+                      ),
+                      width: 120,
+                      height: 100,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.chevron_left,
+                              color: AppColors.primary,
+                            ),
+                          ),
+                          Text(
+                            'C',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.chevron_right,
+                              color: AppColors.primary,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              //!knob Tone
+              // SizedBox(width: 20),
+              Column(
+                children: [
+                  Text('Tone', style: TextStyle(color: Colors.white)),
+                  SizedBox(height: 25),
+
+                  DialKnobControl(),
+                ],
+              ),
+            ],
           ),
         ],
       ),

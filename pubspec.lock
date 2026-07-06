@@ -78,6 +78,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_dial_knob:
+    dependency: "direct main"
+    description:
+      name: flutter_dial_knob
+      sha256: "988b72cae9ef8bea5c4f09dfe8469ac0f9f988079975ffbf7a11939370668d93"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   flutter_lints:
     dependency: "direct dev"
     description:
