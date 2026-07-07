@@ -37,6 +37,8 @@ class _HomePageState extends State<HomePage> {
             CurrentSettings(),
             //*save and mode
             SizedBox(height: 5),
+
+            //*Mode
           ],
         ),
       ),

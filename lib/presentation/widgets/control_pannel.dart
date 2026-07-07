@@ -47,6 +47,18 @@ class ControlPannel extends StatelessWidget {
                       Text('On', style: TextStyle(color: Colors.greenAccent)),
                     ],
                   ),
+                  Spacer(),
+                  //*Mode button
+                  MaterialButton(
+                    height: 50,
+
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    color: AppColors.knob,
+                    onPressed: () {},
+                    child: Text('Mode', style: TextStyle(color: Colors.white)),
+                  ),
                 ],
               ),
               Divider(
@@ -85,6 +97,7 @@ class ControlPannel extends StatelessWidget {
                           ),
                           width: 110,
                           height: 100,
+                          //*Pitch control
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -117,7 +130,6 @@ class ControlPannel extends StatelessWidget {
                   ),
 
                   //!knob Tone
-                  // SizedBox(width: 20),
                   Column(
                     children: [
                       Text('Tone', style: TextStyle(color: Colors.white)),
